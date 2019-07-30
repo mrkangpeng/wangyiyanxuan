@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>vue_wyyx</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but vue_wyyx doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1320784_rvu9puklg8.css">
+  <!-- 解决移动端点击0.3秒延时问题 -->
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    // $(document).ready(function () {
+    //取消浏览器默认行为
+    document.addEventListener('touchstart', function (event) {
+        event.preventDefault();
+      }, false)
+      //点透
+      !(function () {
+        let aNodes = document.querySelectorAll('a');
+        let i = 0;
+        for (; i < aNodes.length; i++) {
+          aNodes[i].addEventListener('touchstart', function () {
+            window.location = this.href;
+          });
+        }
+      })();
+    // 兼容ipad和ipad pro
+    /(iPad|iPad Pro)/i.test(navigator.userAgent) && (head = document.getElementsByTagName(
+      'head'), viewport = document.createElement('meta'), viewport.name = 'viewport', viewport.content =
+      'target-density,dpi=device-dpi, width=480px, user-scalable=no', head.length > 0 && head[head.length - 1]
+      .appendChild(viewport));
+  </script>
+  <title>vue_wyyx</title>
+</head>
+
+<body>
+
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
