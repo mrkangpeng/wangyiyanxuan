@@ -7,27 +7,41 @@ import Profile from '../pages/Profile/Profile.vue'
 export default [
   {
     path: '/home',
-    component: Home
+    component: Home,
+    meta:{
+      isShowTabBar:true
+    }
   },
   {
     path: '/category',
-    component: Category
+    component: Category,
+    meta:{
+      isShowTabBar:true
+    }
   },
   {
     path: '/identify',
-    component: Identify
+    component: Identify,
+    meta:{
+      isShowTabBar:true
+    }
   },
   {
     path: '/cart',
-    component: Cart
+    component: Cart,
+    meta:{
+      isShowTabBar:true
+    }
   },
   {
     path: '/profile',
-    component: Profile
+    component: Profile,
+    meta:{
+      isShowTabBar:false
+    }
   },
   {
-    path: '',
+    path: '/',
     redirect: '/home'
   }
-
 ]

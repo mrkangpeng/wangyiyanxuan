@@ -3,8 +3,11 @@
 * iconfont 找到相应的字体图标
 * 对移动端进行适配，使用阿里的lib-flexible方案，解决移动端点击300ms延时问题，解决a标签点透问题
 * 引入样式重置
->**踩坑**
->引用阿里的lib-flexible方案发现不能兼容ipad,ipad pro,查阅相关资料，已解决
+>**踩坑**:引用阿里的lib-flexible方案发现不能兼容ipad,ipad pro,查阅相关资料，已解决
 
 ## day02
 * 封装底部导航footGuide和打开app提示DefaultBar
+* 完成静态页面Cart、Profile
+* 使用插槽对头部类似结构进行封装
+>**Bug**:滑动时候警告：Unable to preventDefault inside passive event listener 
+>加上全局样式* { touch-action: pan-y; } 后不报错了

@@ -1,5 +1,5 @@
 <template>
-  <div class="defaultBar">
+  <div class="defaultBar" v-if="isShowDefaultBar">
     <div class="defalutBanner">
       <div class="brand">
         <i class="brand-icon"></i>
@@ -10,17 +10,31 @@
       </div>
       <a href="###" class="btn">打开App</a>
       <div class="iconWrap">
-        <i></i>
+        <i class="close" @click="hideBar"></i>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
+import {HIDE_DEFAULT_BAR} from  '../../store/mutation-types'
 export default {
   name: "DefaultBar",
   data() {
-    return {};
+    return {
+      
+    };
+  },
+  computed: {
+    ...mapState({
+      isShowDefaultBar:state => state.home.isShowDefaultBar
+    })
+  },
+  methods: {
+    hideBar(){
+      this.$store.commit(HIDE_DEFAULT_BAR)
+    }
   }
 };
 </script>
@@ -41,7 +55,7 @@ export default {
       position absolute
       top 0
       left 0
-      i
+      .close
         width 38px
         height 38px
         display block

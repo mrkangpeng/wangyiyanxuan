@@ -1,0 +1,1 @@
+export const HIDE_DEFAULT_BAR = 'HIDE_DEFAULT_BAR'
