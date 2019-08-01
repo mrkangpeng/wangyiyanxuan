@@ -3,7 +3,7 @@ import Category from '../pages/Category/Category.vue'
 import Identify from '../pages/Identify/Identify.vue'
 import Cart from '../pages/Cart/Cart.vue'
 import Profile from '../pages/Profile/Profile.vue'
-
+import Search from '../pages/Search/Search.vue'
 export default [
   {
     path: '/home',
@@ -36,6 +36,13 @@ export default [
   {
     path: '/profile',
     component: Profile,
+    meta:{
+      isShowTabBar:false
+    }
+  },
+  {
+    path: '/search',
+    component: Search,
     meta:{
       isShowTabBar:false
     }

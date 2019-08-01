@@ -11,3 +11,9 @@
 * 使用插槽对头部类似结构进行封装
 >**Bug**:滑动时候警告：Unable to preventDefault inside passive event listener 
 >加上全局样式* { touch-action: pan-y; } 后不报错了
+
+## day03
+* 使用better-scroll完成首页滑块的滑动
+* 使用swiper完成banner图
+> **踩坑**：在配置swiper的时候加上loop:true发现不起作用，查阅资料发现我请求是异步的，但是swiper在我请求回来之前就生效了所以没效果，在swiper中加上了v-if判断条件后解决了
+* 完成一些静态页面的书写

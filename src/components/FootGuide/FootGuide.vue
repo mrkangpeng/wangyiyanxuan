@@ -46,7 +46,7 @@ export default {
   justify-content space-around
   width 100%
   height 98px
-  position absolute
+  position fixed
   left 0
   bottom 0
   background-color #ffffff
